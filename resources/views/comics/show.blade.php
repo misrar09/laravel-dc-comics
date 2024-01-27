@@ -3,9 +3,9 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h3>{{ $detail->title }}</h3>
+            <h1>{{ $detail->title }}</h1>
         </div>
-        <div class="row">
+        <div class="row bg-primary text-white">
             <h4>{{ $detail->price }}</h4>
         </div>
         <div class="row">
