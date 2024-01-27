@@ -20,6 +20,10 @@ class ComicSeeder extends Seeder
             $new_comic->price = $card['price'];
             $new_comic->series = $card['series'];
             $new_comic->type = $card['type'];
+            $new_comic->title = $card['title'];
+            $new_comic->description = $card['description'];
+            $new_comic->type = $card['sale_date'];
+
 
             $new_comic->save();
         }
