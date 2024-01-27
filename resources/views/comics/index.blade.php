@@ -10,7 +10,7 @@
                 @foreach ($comic_books as $card)
                     <div class="card">
                         <img src="{{ $card['thumb'] }}" alt="card image">
-                        <p><a href="{{ route('comic.show', $card->id) }}">{{ $card['series'] }}</a></p>
+                        <p><a href="{{ route('comic.show', $card->id) }}">{{ $card['series'] }}</a></p> {{-- added show route to sync index id to see the details of the card --}}
 
                     </div>
                 @endforeach
