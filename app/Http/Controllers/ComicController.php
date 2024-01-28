@@ -38,7 +38,7 @@ class ComicController extends Controller
         $new_comic->type = $newComicData['type'];
         $new_comic->title = $newComicData['title'];
         $new_comic->description = $newComicData['description'];
-        $new_comic->type = $newComicData['sale_date'];
+        $new_comic->sale_date = $newComicData['sale_date'];
         $new_comic->save();
 
         return redirect()->route('comic.show', $new_comic->id);
@@ -58,7 +58,8 @@ class ComicController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $editData = Comic::findOrFail($id);
+        return view('comics.edit', compact('editData'));
     }
 
     /**
@@ -66,8 +67,22 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $newComicData = $request->all();
+
+        $existing_comic = Comic::findOrFail($id);
+
+        $existing_comic->thumb = $newComicData['thumb'];
+        $existing_comic->price = $newComicData['price'];
+        $existing_comic->series = $newComicData['series'];
+        $existing_comic->type = $newComicData['type'];
+        $existing_comic->title = $newComicData['title'];
+        $existing_comic->description = $newComicData['description'];
+        $existing_comic->sale_date = $newComicData['sale_date'];
+        $existing_comic->update();
+
+        return redirect()->route('comic.show', $existing_comic->id);
     }
+
 
     /**
      * Remove the specified resource from storage.

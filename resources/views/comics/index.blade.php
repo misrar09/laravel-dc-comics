@@ -19,6 +19,9 @@
             <div class="centered_button">
                 <button class="card_btn">LOAD MORE</button>
             </div>
+            <div class="centered_button">
+                <a href="{{ route('comic.create') }}" class="btn btn-primary">Create a New Comic</a>
+            </div>
         </div>
     </div>
 
@@ -48,6 +51,11 @@
         .centered_button {
             width: 7rem;
             margin: 2rem auto;
+        }
+
+        .btn {
+            width: 9rem;
+            font-weight: bold;
         }
 
         .card_btn {
