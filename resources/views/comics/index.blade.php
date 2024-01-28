@@ -12,6 +12,12 @@
                         <img src="{{ $card['thumb'] }}" alt="card image">
                         <p><a href="{{ route('comic.show', $card->id) }}">{{ $card['series'] }}</a></p> {{-- added show route to sync index id to see the details of the card --}}
 
+                        <form action="{{ route('comic.destroy', $card->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit", value="Delete" class="btn btn-warning">
+                        </form>
+
                     </div>
                 @endforeach
 

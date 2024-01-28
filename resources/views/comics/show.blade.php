@@ -12,10 +12,10 @@
             <p>{{ $detail->description }}</p>
         </div>
     </div>
-    <div class="row mb-2">
-        <a href="{{ route('comic.edit', $detail->id) }}" class="btn btn-danger">Edit this Comic</a>
-    </div>
-    <div class="row">
-        <a href="{{ route('comic.index') }}" class="btn btn-secondary">Go Back</a>
+    <div class="row mb-2 mx-5">
+        <div class="col mx-5">
+            <a href="{{ route('comic.edit', $detail->id) }}" class="btn btn-danger w-25 mx-5">Edit this Comic</a>
+            <a href="{{ route('comic.index') }}" class="btn btn-secondary w-25">Go Back</a>
+        </div>
     </div>
 @endsection
