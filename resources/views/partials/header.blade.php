@@ -7,7 +7,7 @@ $navTitles = [
     ],
     [
         'text' => 'COMICS',
-        'link' => '#',
+        'link' => route('comic.index'),
     ],
     [
         'text' => 'MOVIES',
