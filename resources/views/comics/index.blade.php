@@ -10,19 +10,22 @@
             <div class="all_cards">
                 @foreach ($comic_books as $card)
                     <div class="card">
-                        <img src="{{ $card['thumb'] }}" alt="card image">
-                        <p><a href="{{ route('comic.show', $card->id) }}">{{ $card['series'] }}</a></p> {{-- added show route to sync index id to see the details of the card --}}
-
-                        <form action="{{ route('comic.destroy', $card->id) }}" method="POST">
+                        <form class=""position-absolute action="{{ route('comic.destroy', $card->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <input type="submit", value="Delete" class="btn btn-warning" onclick="return confirmDelete()">
+                            <button type="submit" class="btn btn-link text-warning" onclick="return confirmDelete()">
+                                <i class="fa-solid fa-trash"></i> Delete
+                            </button>
                         </form>
                         <script>
                             function confirmDelete() {
                                 return confirm('Are you sure you want to delete this item?');
                             }
                         </script>
+                        <img src="{{ $card['thumb'] }}" alt="card image">
+                        <p><a href="{{ route('comic.show', $card->id) }}">{{ $card['series'] }}</a></p>
+                        {{-- added show route to sync index id to see the details of the card --}}
+
                     </div>
                 @endforeach
 
