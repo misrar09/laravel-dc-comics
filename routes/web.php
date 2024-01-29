@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $dati = config("data");
-    return view('home', $dati);
-    /*  $comic_books = Comic::all();
-    return view('comics.index', compact("comic_books"), $dati);*/
+    /*     $dati = config("data");
+    return view('home', $dati); */
+    $comic_books = Comic::all();
+    return view('comics.index', compact("comic_books"));
 })->name("home");
 
 

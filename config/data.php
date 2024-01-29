@@ -1,7 +1,7 @@
 <?php
 
 
-return [
+/* return [
 
     "navTitles" => [
         [
@@ -36,4 +36,4 @@ return [
             'link' => "#",
         ]
     ]
-];
+]; */

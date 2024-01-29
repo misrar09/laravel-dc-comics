@@ -2,9 +2,10 @@
 
 
 @section('content')
-    <h1>Hello</h1>
-
     <div class="all_cards_bg">
+        <div class="centered_button">
+            <a href="{{ route('comic.create') }}" class="btn btn-primary">Create a New Comic</a>
+        </div>
         <div class="all_cards_wrapper">
             <div class="all_cards">
                 @foreach ($comic_books as $card)
@@ -25,9 +26,6 @@
             <div class="centered_button">
                 <button class="card_btn">LOAD MORE</button>
             </div>
-            <div class="centered_button">
-                <a href="{{ route('comic.create') }}" class="btn btn-primary">Create a New Comic</a>
-            </div>
         </div>
     </div>
 
@@ -35,7 +33,7 @@
         .card {
             width: 10rem;
             height: 11rem;
-            margin-bottom: 2rem;
+            margin-bottom: 5rem;
         }
 
         .card img {
@@ -56,12 +54,13 @@
 
         .centered_button {
             width: 7rem;
-            margin: 2rem auto;
+            margin: auto;
         }
 
         .btn {
             width: 9rem;
             font-weight: bold;
+
         }
 
         .card_btn {
@@ -76,7 +75,6 @@
 
         .all_cards_bg {
             background-color: black;
-            height: 36rem;
         }
 
         .all_cards_wrapper {

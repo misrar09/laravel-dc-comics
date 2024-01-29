@@ -10,10 +10,21 @@
 </head>
 
 <body>
+    <header>
+        @include('partials.header')
 
-    @include('partials.header')
+    </header>
+    <main>
+        @include ('partials.jumbotron')
+        @yield('content')
 
-    @yield('content')
+    </main>
+
+    <footer>
+
+        @include ('partials.footer')
+    </footer>
+
 
 </body>
 
