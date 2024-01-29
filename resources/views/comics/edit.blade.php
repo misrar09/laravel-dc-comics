@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h1>Edit/Modify Comic</h1>
+            <h1 class="mt-5">Edit/Modify Comic</h1>
         </div>
         <div class="row">
             <form action="{{ route('comic.update', $editData->id) }}" method="POST">
@@ -48,6 +48,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Modify</button>
             </form>
+            <a href="{{ route('comic.index') }}" class="btn btn-secondary w-25 mt-3 mb-5 text-white">Go Back</a>
         </div>
     </div>
 @endsection
