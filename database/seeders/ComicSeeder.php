@@ -22,7 +22,7 @@ class ComicSeeder extends Seeder
             $new_comic->type = $card['type'];
             $new_comic->title = $card['title'];
             $new_comic->description = $card['description'];
-            $new_comic->type = $card['sale_date'];
+            $new_comic->sale_date = $card['sale_date'];
 
 
             $new_comic->save();
