@@ -79,6 +79,18 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
+
+        $request->validate([
+            'thumb' => 'required|url',
+            'price' => 'required|numeric',
+            'series' => 'required|string',
+            'type' => 'required|string',
+            'title' => 'required|string',
+            'description' => 'required|string',
+            'sale_date' => 'required|date',
+        ]);
+
+
         $newComicData = $request->all();
 
         $existing_comic = Comic::findOrFail($id);

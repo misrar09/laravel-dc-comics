@@ -35,7 +35,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Price</label>
-                    <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="price"
+                    <input type="text" class="form-control @error('price') is-invalid @enderror" id="price"
                         placeholder="Insert Price" name= "price" value="{{ old('price') }}">
                 </div>
                 <div class="mb-3">
